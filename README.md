@@ -1,4 +1,4 @@
-# Guard::Node::Jshint
+# Guard::JshintNode
 
 This guard will run [JSHint](http://www.jshint.com/) for you automatically when files are modified.
 
