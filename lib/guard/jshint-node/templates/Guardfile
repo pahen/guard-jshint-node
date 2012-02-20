@@ -1,0 +1,4 @@
+# Installed by guard-jshint-node
+guard 'jshint-node', :config => 'jshint-config.json' do
+ 	watch(%r{.*\.js$})
+end
