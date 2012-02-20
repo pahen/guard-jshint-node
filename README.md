@@ -34,6 +34,6 @@ If Growl messages should be displayed or not.
 
 ### Example
 
-	guard 'jshint', :config => 'path/to/config.json' do
+	guard 'jshint-node', :config => 'path/to/config.json' do
   		watch(%r{^scripts\/.*\.js$})
 	end
