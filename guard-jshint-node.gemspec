@@ -4,7 +4,7 @@ require 'guard/jshint-node/version'
 
 Gem::Specification.new do |s|
   s.name        = 'guard-jshint-node'
-  s.version     = Guard::JshintNode::VERSION
+  s.version     = Guard::JshintNodeVersion::VERSION
   s.authors     = ['Patrik Henningsson']
   s.email       = ['patrik.henningsson@gmail.com']
   s.homepage    = 'http://github.com/pahen/guard-jshint-node'
