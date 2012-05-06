@@ -1,5 +1,7 @@
 # Guard::JshintNode
 
+[![Build Status](https://secure.travis-ci.org/pahen/guard-jshint-node.png)](http://travis-ci.org/pahen/guard-jshint-node)
+
 This guard will run [JSHint](http://www.jshint.com/) for you automatically when files are modified.
 
 ## Install
