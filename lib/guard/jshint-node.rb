@@ -4,8 +4,6 @@ require 'guard/guard'
 module Guard
 	class JshintNode < Guard
 
-		VERSION = '0.0.2'
-
 		DEFAULT_OPTIONS = {
 			:config => 'jshint-config.json',
 			:notify => true,

@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path('../lib', __FILE__)
-require 'guard/jshint-node'
+require 'guard/jshint-node/version'
 
 Gem::Specification.new do |s|
   s.name        = 'guard-jshint-node'
