@@ -10,19 +10,21 @@ Make sure you have [guard](http://github.com/guard/guard) and [jshint](http://gi
 
 Install the gem with:
 
-    gem install guard-node-jshint
+    gem install guard-jshint-node
 
 Or add it to your Gemfile:
 
-    gem 'guard-node-jshint'
+    gem 'guard-jshint-node'
 
 And then add a basic setup to your Guardfile:
 
-    guard init node-jshint
+    guard init jshint-node
 
 ## Usage
 
-For configuration example, see [example/config.json](http://github.com/jshint/node-jshint/blob/master/example/config.json) and the available [options](http://www.jshint.com/options).
+For configuration example, see [example/config.json](https://github.com/jshint/node-jshint/blob/master/example/defaults.json) and the available [options](http://www.jshint.com/options).
+
+
 
 ## Options
 
