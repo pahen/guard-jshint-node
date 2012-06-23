@@ -20,8 +20,8 @@ module Guard
 
 		# Called on file(s) modifications that the Guard watches.
 		# @param [Array<String>] paths the changes files or paths
-		# @raise [:task_has_failed] when run_on_change has failed
-		def run_on_change(paths)
+		# @raise [:task_has_failed] when run_on_changes has failed
+		def run_on_changes(paths)
 			paths.each do |path|
 
 				is_old_version = (Gem::Version.new(`jshint --version`) < Gem::Version.new('0.5.2'))
