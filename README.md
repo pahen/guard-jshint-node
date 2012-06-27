@@ -28,6 +28,10 @@ For configuration example, see [example/config.json](https://github.com/jshint/n
 
 ## Options
 
+* `:executable   # default => "jshint"`
+
+Specify alternative path to the jshint command.
+
 * `:config   # default => "jshint-config.json"`
 
 Specify path to config file.
@@ -41,3 +45,7 @@ If Growl messages should be displayed or not.
 	guard 'jshint-node', :config => 'path/to/config.json' do
   		watch(%r{^scripts\/.*\.js$})
 	end
+
+# Running Tests
+
+	bundle exec rake

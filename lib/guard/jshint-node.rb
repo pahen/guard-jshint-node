@@ -6,6 +6,7 @@ module Guard
 
 		DEFAULT_OPTIONS = {
 			:config => 'jshint-config.json',
+			:executable => 'jshint',
 			:notify => true,
 		}
 
@@ -24,8 +25,8 @@ module Guard
 		def run_on_changes(paths)
 			paths.each do |path|
 
-				is_old_version = (Gem::Version.new(`jshint --version`) < Gem::Version.new('0.5.2'))
-				results = `jshint #{path} --config #{@options[:config]}`
+				is_old_version = (Gem::Version.new(`#{@options[:executable]} --version`) < Gem::Version.new('0.5.2'))
+				results = `#{@options[:executable]} #{path} --config #{@options[:config]}`
 
 				if (is_old_version and results.include? 'Lint Free!') or (!is_old_version and $?.to_i == 0) then
 					if options[:notify]
