@@ -46,6 +46,16 @@ If Growl messages should be displayed or not.
   		watch(%r{^scripts\/.*\.js$})
 	end
 
+# Build & Test Install
+
+	bundle -V check
+	gem build -V guard-jshint-node.gemspec
+	gem check --verify guard-jshint-node-<VERSION>.gem
+
+	gem install --local -V guard-jshint-node-<VERSION>.gem
+	gem uninstall -a guard-jshint-node
+
+
 # Running Tests
 
 	bundle exec rake
