@@ -36,9 +36,13 @@ Specify alternative path to the jshint command.
 
 Specify path to config file.
 
-* `:notify   # default => true`
+* `:notify_on_success   # default => true`
 
-If Growl messages should be displayed or not.
+If Growl messages should be displayed on success or not.
+
+* `:notify_on_failure   # default => true`
+
+If Growl messages should be displayed on failure or not.
 
 ### Example
 

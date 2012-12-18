@@ -7,7 +7,8 @@ module Guard
 		DEFAULT_OPTIONS = {
 			:config => 'jshint-config.json',
 			:executable => 'jshint',
-			:notify => true,
+			:notify_on_success => true,
+			:notify_on_failure => true
 		}
 
 		# Initialize a Guard.
@@ -29,12 +30,12 @@ module Guard
 				results = `#{@options[:executable]} #{path} --config #{@options[:config]}`
 
 				if (is_old_version and results.include? 'Lint Free!') or (!is_old_version and $?.to_i == 0) then
-					if options[:notify]
+					if options[:notify_on_success]
 						::Guard::Notifier.notify('No errors found.', :title => 'JSHint', :image => :success)
 					end
 					return true
 				else
-					if options[:notify]
+					if options[:notify_on_failure]
 						::Guard::Notifier.notify(results, :title => 'JSHint Errors', :image => :failed)
 					end
 					print results
