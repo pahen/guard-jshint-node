@@ -8,7 +8,8 @@ module Guard
 			:config => 'jshint-config.json',
 			:executable => 'jshint',
 			:notify_on_success => true,
-			:notify_on_failure => true
+			:notify_on_failure => true,
+			:run_at_start => true
 		}
 
 		# Initialize a Guard.
@@ -18,6 +19,18 @@ module Guard
 			defaults = DEFAULT_OPTIONS.clone
 			@options = defaults.merge(options)
 			super(watchers, @options)
+		end
+
+		def start
+			run_all if options[:run_at_start]
+		end
+
+		def reload
+			run_all
+		end
+
+		def run_all
+			run_on_changes(Watcher.match_files(self, Dir.glob(File.join('**', '*.*'))))
 		end
 
 		# Called on file(s) modifications that the Guard watches.
