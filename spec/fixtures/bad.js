@@ -1,1 +1,1 @@
-var n = parseInt(666);
+if (1 = 2) {}
