@@ -1,3 +1,5 @@
+## This project is no longer maintained by me since I'm not using Guard in my projects anymore. Feel free to contact me if you wan't to be a new maintainer.
+
 # Guard::JshintNode
 
 [![Build Status](https://secure.travis-ci.org/pahen/guard-jshint-node.png)](http://travis-ci.org/pahen/guard-jshint-node)
